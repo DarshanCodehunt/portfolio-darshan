@@ -1,0 +1,33 @@
+.banner-container {
+  flex: 3;
+  overflow: hidden;
+  position: relative;
+
+  //   img {
+  //     max-height: 100%;
+  //     width: 100%;
+  //     object-fit: cover;
+  //     background-image: linear-gradient(
+  //         rgba(255, 255, 255, 0.5),
+  //         rgba(255, 255, 255, 0.5)
+  //       ),
+  //       url("../../assets/images/banner.jpg");
+  //   }
+
+  .img-container {
+    // background-image: url("../../assets/images/banner.jpg");
+    background: linear-gradient(rgba(92, 55, 122, 0.8), rgba(69, 50, 77, 0.8)),
+      url("../../assets/images/banner.jpg");
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  //   img {
+  //     position: absolute;
+  //     width: 300px;
+  //     height: 300px;
+  //     top: 0;
+  //     border-radius: 50%;
+  //   }
+}

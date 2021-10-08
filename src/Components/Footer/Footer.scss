@@ -1,0 +1,22 @@
+.footer-container {
+  flex: 0.3;
+  margin-top: 1rem;
+  background: #241024;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  a {
+    margin: 1rem;
+    transition: all 0.3s ease;
+  }
+
+  a:hover {
+    background: #e31b6d;
+  }
+
+  .copy-right {
+    color: silver;
+  }
+}
