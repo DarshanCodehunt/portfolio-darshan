@@ -1,0 +1,7 @@
+type userContact @model {
+  id: ID!
+  name: String!
+  email: String!
+  phone: String!
+  message: String!
+}

@@ -28,10 +28,58 @@
     font-family: Verdana;
     padding: 2rem;
     justify-content: center;
+    font-family: verdana;
+    font-size: 0.9rem;
 
     div {
       flex-basis: 30%;
       line-height: 1.5rem;
+    }
+  }
+}
+
+//iPad 1, 2, Mini and Air || 768 x 1024 || Default, Portrait
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .about-container {
+    flex: 1.5;
+    .about-detail {
+      font-size: 1.5rem;
+      display: flex;
+      flex-direction: column;
+
+      div {
+        padding: 1.5rem;
+      }
+    }
+  }
+}
+
+//iPhone 6, 6S, 7 and 8 || 375 x 667 || Default, Portrait
+@media only screen and (min-width: 375px) and (max-width: 667px) {
+  .about-container {
+    .about-detail {
+      display: flex;
+      flex-direction: column;
+      margin-top: 0;
+
+      div {
+        padding: 0.5rem;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 360px) and (max-width: 640px) {
+  // <!-- For Mobile -->
+  .about-container {
+    .about-detail {
+      display: flex;
+      flex-direction: column;
+      margin-top: 0;
+
+      div {
+        padding: 0.5rem;
+      }
     }
   }
 }

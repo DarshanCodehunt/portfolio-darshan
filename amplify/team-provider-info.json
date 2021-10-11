@@ -1,0 +1,15 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-darshanportfolio-dev-174727-authRole",
+      "UnauthRoleArn": "arn:aws:iam::659796294110:role/amplify-darshanportfolio-dev-174727-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::659796294110:role/amplify-darshanportfolio-dev-174727-authRole",
+      "Region": "ap-south-1",
+      "DeploymentBucketName": "amplify-darshanportfolio-dev-174727-deployment",
+      "UnauthRoleName": "amplify-darshanportfolio-dev-174727-unauthRole",
+      "StackName": "amplify-darshanportfolio-dev-174727",
+      "StackId": "arn:aws:cloudformation:ap-south-1:659796294110:stack/amplify-darshanportfolio-dev-174727/b6ebd4a0-2831-11ec-bc7e-02bbc3c1833e",
+      "AmplifyAppId": "d1kwnqvpbap27j"
+    }
+  }
+}

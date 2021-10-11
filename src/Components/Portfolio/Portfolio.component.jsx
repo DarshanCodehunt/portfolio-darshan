@@ -19,14 +19,28 @@ const Portfolio = React.forwardRef((props, ref) => {
               class="front"
             ></div>
             <div class="back">
-              <div>
-                <VerticalProgress progress={obj.expertValue} />
-                <div className={"interest-text"}>Expertise</div>
+              <div className={"tech-params"}>
+                <div className={"param-block"}>
+                  <div style={{ borderBottom: "1px solid silver" }}>
+                    Technology
+                  </div>
+                  <div>{obj.displayName}</div>
+                </div>
+                <div className={"param-block"}>
+                  <div style={{ borderBottom: "1px solid silver" }}>
+                    Experience
+                  </div>
+                  <div>{obj.experience}</div>
+                </div>
               </div>
-              <div id={"love-meter"}>
+              <div className={"progress-section"}>
+                <VerticalProgress progress={obj.expertValue} />
+                <div className={"interest-text"}>Tech Expertise</div>
+              </div>
+              {/* <div id={"love-meter"}>
                 <VerticalProgress progress={20} />
                 <div className={"interest-text"}>Love</div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
@@ -35,7 +49,7 @@ const Portfolio = React.forwardRef((props, ref) => {
   };
   return (
     <div ref={ref} className={"portfolio-container"}>
-      <div className={"portfolio-title"}>
+      <div className={" portfolio-title"}>
         TECH STACK
         <div className={"divider"}></div>
       </div>

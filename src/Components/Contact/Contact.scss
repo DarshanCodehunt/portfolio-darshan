@@ -20,7 +20,7 @@
     }
   }
   .contact-detail {
-    margin-top: 2rem;
+    margin-top: 1rem;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -51,6 +51,18 @@
       input:valid ~ label {
         transform: translateY(-20px);
       }
+
+      input:invalid ~ label {
+        transform: translateY(-20px);
+      }
+
+      input[type="number"]::-webkit-inner-spin-button,
+      input[type="number"]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        margin: 0;
+      }
     }
 
     input {
@@ -78,6 +90,56 @@
     button:hover {
       background: #f3ca20;
       border-color: #f3ca20;
+    }
+  }
+}
+
+//IPAD MINI
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .contact-container {
+    flex: 2;
+    .contact-detail {
+      margin-top: 3rem;
+      margin-left: 1rem;
+
+      .input-data {
+        label {
+          font-size: 2rem;
+          margin-bottom: 1rem;
+        }
+      }
+      input {
+        width: 80%;
+        font-size: 2rem;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 375px) and (max-width: 667px) {
+  // <!-- For Mobile -->
+  .contact-container {
+    .contact-detail {
+      margin-top: 3rem;
+      margin-left: 1rem;
+
+      input {
+        width: 80%;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 360px) and (max-width: 640px) {
+  // <!-- For Mobile -->
+  .contact-container {
+    .contact-detail {
+      margin-top: 3rem;
+      margin-left: 1rem;
+
+      input {
+        width: 80%;
+      }
     }
   }
 }

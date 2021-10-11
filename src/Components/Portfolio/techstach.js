@@ -44,9 +44,9 @@ const data = [
   {
     name: "aws",
     imgSrc: aws,
-    displayName: "Amazon WebServices",
+    displayName: "AWS",
     expertValue: 60,
-    experience: "18 months",
+    experience: "12 months",
   },
 ];
 

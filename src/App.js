@@ -6,6 +6,10 @@ import Contact from "./Components/Contact/Contact.component";
 import Footer from "./Components/Footer/Footer.component";
 import "./App.css";
 import { useEffect, useRef, useState } from "react";
+import Amplify from "aws-amplify";
+import awsconfig from "./aws-exports";
+
+Amplify.configure(awsconfig);
 
 function App() {
   const portfolioRef = useRef(null);
@@ -18,8 +22,9 @@ function App() {
     };
     setRefsLoaded(true);
   }, []);
+
   return (
-    <div className={"portfolio-container"}>
+    <div className={"app-container"}>
       <Navbar
         aboutRef={refsLoaded ? aboutRef : null}
         portfolioRef={refsLoaded ? portfolioRef : null}
@@ -27,7 +32,7 @@ function App() {
       />
       <Banner />
       <Portfolio ref={portfolioRef} />
-      <About ref={aboutRef} />
+      <About contactRef={contactRef} ref={aboutRef} />
       <Contact ref={contactRef} />
       <Footer />
     </div>
