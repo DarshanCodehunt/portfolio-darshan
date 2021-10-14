@@ -38,7 +38,7 @@ const About = React.forwardRef((props, ref) => {
           design. I contend to provide a non annoying User Experience.So come
           <span
             onClick={navigatetoContact}
-            style={{ color: "blue", cursor: "pointer" }}
+            style={{ color: "#009ada", cursor: "pointer" }}
           >
             {" "}
             connect with me

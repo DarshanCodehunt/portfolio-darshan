@@ -16,11 +16,66 @@
 
   .img-container {
     // background-image: url("../../assets/images/banner.jpg");
-    background: linear-gradient(rgba(92, 55, 122, 0.8), rgba(69, 50, 77, 0.8)),
+    background: linear-gradient(rgba(92, 55, 122, 0.95), rgba(69, 50, 77, 1)),
       url("../../assets/images/banner.jpg");
     height: 100%;
     background-size: cover;
     background-repeat: no-repeat;
+
+    .img-block {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+      align-items: center;
+      //display: flex;
+      //align-items: flex-end;
+
+      .banner-title {
+        font-size: 2rem;
+        font-family: verdana;
+        font-weight: bold;
+        color: #f3ca20;
+        animation: slideright 2s forwards;
+        padding: 1rem;
+      }
+
+      .img-display {
+        background: url("../../assets/images/darshan_me.jpg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        border: 5px solid grey;
+      }
+
+      // img {
+      //   // width: 25%;
+      //   padding: 1rem;
+      //   //animation: slideIn 2s forwards;
+      //   border-radius: 50%;
+      // }
+    }
+  }
+
+  @keyframes slideIn {
+    0% {
+      transform: translateX(-900px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  @keyframes slideright {
+    0% {
+      transform: translateX(900px);
+    }
+    100% {
+      transform: translateX(0);
+    }
   }
 
   //   img {

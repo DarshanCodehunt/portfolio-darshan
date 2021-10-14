@@ -22,7 +22,7 @@ const Footer = (props) => {
         />
       </a>
       <a
-        href={"https://www.facebook.com/"}
+        href={"https://www.facebook.com/darshan.kodkani.5"}
         className={"linkedin-icon"}
         target="_blank"
         rel="noreferrer"
