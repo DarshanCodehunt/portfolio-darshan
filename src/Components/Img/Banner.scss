@@ -54,13 +54,6 @@
         border-radius: 50%;
         border: 5px solid grey;
       }
-
-      // img {
-      //   // width: 25%;
-      //   padding: 1rem;
-      //   //animation: slideIn 2s forwards;
-      //   border-radius: 50%;
-      // }
     }
   }
 
@@ -80,12 +73,39 @@
       transform: translateX(0);
     }
   }
+}
 
-  //   img {
-  //     position: absolute;
-  //     width: 300px;
-  //     height: 300px;
-  //     top: 0;
-  //     border-radius: 50%;
-  //   }
+//ipad
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .banner-container {
+    flex: 2;
+  }
+}
+
+//iPhone 6, 6S, 7 and 8 || 375 x 667 || Default, Portrait
+@media only screen and (min-width: 375px) and (max-width: 667px) {
+  .banner-container {
+    .img-container {
+      .img-block {
+        .banner-title {
+          font-size: 1rem;
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+}
+
+//Galaxy
+@media only screen and (min-width: 360px) and (max-width: 640px) {
+  .banner-container {
+    .img-container {
+      .img-block {
+        .banner-title {
+          font-size: 1rem;
+          white-space: nowrap;
+        }
+      }
+    }
+  }
 }

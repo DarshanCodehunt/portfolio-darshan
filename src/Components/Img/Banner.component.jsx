@@ -9,7 +9,7 @@ const Banner = (props) => {
         <div className={"img-block"}>
           <div className={"img-display"}>{/* <img src={Me} alt={""} /> */}</div>
           <div className={"banner-title"}>
-            Full Stack Developer - Designer - Coder
+            Full Stack Developer - Web Designer
           </div>
         </div>
       </div>
