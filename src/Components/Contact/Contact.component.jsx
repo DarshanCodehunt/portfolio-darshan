@@ -37,6 +37,15 @@ const Contact = React.forwardRef((props, ref) => {
           "Thank you for Contacting!!.Will get back to you Shortly.",
           { duration: 4000 }
         );
+
+        const resetObject = {
+          name: "",
+          phone: "",
+          email: "",
+          message: "",
+        };
+
+        setContactObj(resetObject);
       }
     } catch (err) {
       toast.error("Something went wrong.Try after sometime", {
