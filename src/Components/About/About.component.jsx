@@ -28,7 +28,7 @@ const About = React.forwardRef((props, ref) => {
             color={"Orange"}
             vertical
           />
-          . I am a Web developer with 6 plus years of commercial experience. I
+          . I am a Web developer with 6 plus years of commercial experience. <br/> I
           am currently based in Bangalore, India. I love creating websites that
           are fast, interactive and built with best Practices.
         </div>

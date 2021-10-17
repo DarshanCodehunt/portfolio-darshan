@@ -6,10 +6,10 @@ import Contact from "./Components/Contact/Contact.component";
 import Footer from "./Components/Footer/Footer.component";
 import "./App.css";
 import { useEffect, useRef, useState } from "react";
-import Amplify from "aws-amplify";
-import awsconfig from "./aws-exports";
+// import Amplify from "aws-amplify";
+// import awsconfig from "./aws-exports";
 
-Amplify.configure(awsconfig);
+// Amplify.configure(awsconfig);
 
 function App() {
   const portfolioRef = useRef(null);
