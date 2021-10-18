@@ -5,12 +5,12 @@
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  justify-content: center;
 
   .about-title {
     // font-family: Arial Black;
     font-size: 2.5rem;
     align-self: center;
-    margin-top: 12rem;
 
     .divider {
       width: 100%;

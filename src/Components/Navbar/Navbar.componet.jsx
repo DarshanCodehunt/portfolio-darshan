@@ -9,21 +9,21 @@ const Navbar = (props) => {
         props.portfolioRef.current &&
         window.scrollTo({
           behavior: "smooth",
-          top: props.portfolioRef.current.offsetTop - 75,
+          top: props.portfolioRef.current.offsetTop - 50,
         });
     } else if (id === "about") {
       props.aboutRef &&
         props.aboutRef.current &&
         window.scrollTo({
           behavior: "smooth",
-          top: props.aboutRef.current.offsetTop - 75,
+          top: props.aboutRef.current.offsetTop - 50,
         });
     } else if (id === "contact") {
       props.contactRef &&
         props.contactRef.current &&
         window.scrollTo({
           behavior: "smooth",
-          top: props.contactRef.current.offsetTop - 75,
+          top: props.contactRef.current.offsetTop - 50,
         });
     }
   };
