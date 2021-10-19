@@ -1,11 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Portfolio.scss";
 import techStackData from "./techstach.js";
 import VerticalProgress from "../VerticalProgress/VerticalProgress";
 const Portfolio = React.forwardRef((props, ref) => {
-  const [tracker, setTracker] = useState(null);
-
-  console.log("Tracker", tracker);
   const renderCards = () => {
     return techStackData.map((obj, i) => {
       return (

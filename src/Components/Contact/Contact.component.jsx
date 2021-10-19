@@ -1,31 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Contact.scss";
 import { API, graphqlOperation } from "aws-amplify";
 import { createUserContact } from "../../graphql/mutations";
 import toast, { Toaster } from "react-hot-toast";
+import { Formik, Form } from "formik";
+import * as Yup from "yup";
+import TextInput from "./TextInput.component";
 
 const Contact = React.forwardRef((props, ref) => {
-  const [contactObj, setContactObj] = useState({
-    name: "",
-    phone: "",
-    email: "",
-    message: "",
-  });
-  const handleChange = (e) => {
-    const temp = { ...contactObj };
-    temp[e.target.id] = e.target.value;
-    setContactObj(temp);
-  };
-
-  const sendData = (e) => {
-    e.preventDefault();
-    e.stopPropagation();
-
-    console.log(contactObj);
-
-    createUser(contactObj);
-  };
-
   const createUser = async (contactObj) => {
     try {
       let response = await API.graphql(
@@ -37,15 +19,6 @@ const Contact = React.forwardRef((props, ref) => {
           "Thank you for Contacting!!.Will get back to you Shortly.",
           { duration: 4000 }
         );
-
-        const resetObject = {
-          name: "",
-          phone: "",
-          email: "",
-          message: "",
-        };
-
-        setContactObj(resetObject);
       }
     } catch (err) {
       toast.error("Something went wrong.Try after sometime", {
@@ -54,55 +27,53 @@ const Contact = React.forwardRef((props, ref) => {
     }
   };
 
+  const renderForm = () => {
+    const phoneRegExp =
+      /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
+    return (
+      <Formik
+        initialValues={{
+          name: "",
+          phone: "",
+          email: "",
+          message: "",
+        }}
+        validationSchema={Yup.object({
+          name: Yup.string()
+            .max(15, "Must be 15 characters or less")
+            .required("This field is Required."),
+          phone: Yup.string()
+            .matches(phoneRegExp, "Phone number is not valid")
+            .max(15, "Must be 15 characters or less")
+            .required("This field is Required."),
+          email: Yup.string()
+            .email("Invalid email addresss`")
+            .required("This field is Required."),
+          message: Yup.string(),
+        })}
+        onSubmit={async (payload) => {
+          createUser(payload);
+        }}
+      >
+        <Form>
+          <TextInput label="Name" name="name" type="text" />
+          <TextInput label="Phone Number" name="phone" type="text" />
+          <TextInput label="Email Address" name="email" type="email" />
+          <TextInput label="Message" name="message" type="text" />
+
+          <button type="submit">Submit</button>
+        </Form>
+      </Formik>
+    );
+  };
+
   return (
     <div ref={ref} className={"contact-container"}>
       <Toaster position="bottom-center" />
       <div className={"contact-title"}>
         Contact <div className={"divider"}></div>
       </div>
-      <form onSubmit={sendData} className={"contact-detail"}>
-        <div className={"input-data"}>
-          <input
-            value={contactObj.name}
-            required
-            id={"name"}
-            onChange={handleChange}
-            type={"text"}
-          />
-          <label>Name</label>
-        </div>
-        <div className={"input-data"}>
-          <input
-            value={contactObj.email}
-            id={"email"}
-            onChange={handleChange}
-            type={"email"}
-          />
-          <label>Email Address</label>
-        </div>
-        <div className={"input-data"}>
-          <input
-            value={contactObj.phone}
-            type="number"
-            id={"phone"}
-            onChange={handleChange}
-            required
-            maxLength={15}
-          />
-          <label>Phone Number</label>
-        </div>
-        <div className={"input-data"}>
-          <input
-            value={contactObj.message}
-            id={"message"}
-            onChange={handleChange}
-            type={"text"}
-          />
-          <label>Message</label>
-        </div>
-
-        <button>Send</button>
-      </form>
+      <>{renderForm()}</>
     </div>
   );
 });

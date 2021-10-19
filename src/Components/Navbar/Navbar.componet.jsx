@@ -28,7 +28,6 @@ const Navbar = (props) => {
     }
   };
 
-  console.log("Navbar");
   return (
     <div className={"navbar-container"}>
       <div

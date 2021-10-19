@@ -1,14 +1,16 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
+
 html,
 body {
   max-width: 100%;
   overflow-x: hidden;
 }
 .app-container {
-  height: 400vh;
+  height: 420vh;
   display: flex;
   flex-direction: column;
 }
@@ -16,14 +18,13 @@ body {
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
 }
 @media only screen and (min-width: 375px) and (max-width: 667px) {
-  /* // <!-- For Mobile --> */
   .app-container {
-    height: 500vh;
+    height: 450vh;
   }
 }
 
 @media only screen and (min-width: 360px) and (max-width: 640px) {
   .app-container {
-    height: 530vh;
+    height: 480vh;
   }
 }

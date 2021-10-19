@@ -28,17 +28,18 @@
     margin-top: 1rem;
     height: 100%;
     padding: 2rem;
-    width: 50%;
+    width: 65%;
     align-self: center;
     position: relative;
+    justify-items: center;
 
     .flip-container {
       -webkit-perspective: 1000;
       -moz-perspective: 1000;
       -o-perspective: 1000;
       perspective: 1000;
-      width: 100%;
-      height: 100%;
+      width: 200px;
+      height: 200px;
     }
 
     .flip-container:hover .flipper,
@@ -168,11 +169,17 @@
 @media only screen and (min-width: 375px) and (max-width: 667px) {
   // <!-- For Mobile -->
   .portfolio-container {
-    flex: 6;
+    flex: 4;
     .tech-stack-container {
       display: grid;
       grid-template-columns: repeat(1, 1fr);
       grid-gap: 2rem;
+      padding: 0;
+      margin-top: 2rem;
+      .flip-container {
+        width: 180px;
+        height: 140px;
+      }
     }
   }
 }
@@ -180,11 +187,18 @@
 @media only screen and (min-width: 360px) and (max-width: 640px) {
   // <!-- For Mobile -->
   .portfolio-container {
-    flex: 6;
+    flex: 4;
     .tech-stack-container {
       display: grid;
       grid-template-columns: repeat(1, 1fr);
       grid-gap: 2rem;
+      padding: 0;
+      margin-top: 2rem;
+
+      .flip-container {
+        width: 180px;
+        height: 150px;
+      }
     }
   }
 }

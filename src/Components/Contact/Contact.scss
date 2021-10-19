@@ -1,5 +1,5 @@
 .contact-container {
-  flex: 3;
+  flex: 3.5;
   margin-top: 2rem;
   display: flex;
   flex-direction: column;
@@ -28,70 +28,116 @@
     align-items: flex-start;
     justify-content: space-between;
     margin-left: 7rem;
-
-    .input-data {
-      width: 100%;
-      position: relative;
-      display: flex;
-      flex-direction: column;
-
-      label {
-        position: absolute;
-        bottom: 20px;
-        left: 0%;
-        pointer-events: none;
-        color: green;
-        transition: all 0.3s ease;
-      }
-
-      input:focus ~ label {
-        transform: translateY(-20px);
-      }
-
-      input:valid ~ label {
-        transform: translateY(-20px);
-      }
-
-      input:invalid ~ label {
-        transform: translateY(-20px);
-      }
-
-      input[type="number"]::-webkit-inner-spin-button,
-      input[type="number"]::-webkit-outer-spin-button {
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
-        margin: 0;
-      }
-    }
-
-    input {
-      width: 50%;
-      font-size: 1rem;
-      height: 3rem;
-      outline: 0;
-      border-width: 0 0 2px;
-      border-color: silver;
-    }
-
-    button {
-      border-radius: 5px;
-      padding: 1rem 1.75rem;
-      font-size: 1.25rem;
-      color: white;
-      cursor: pointer;
-      background: transparent;
-      color: black;
-      border: 2px solid black;
-      outline: none;
-      transition: all 0.3s ease;
-    }
-
-    button:hover {
-      background: #f3ca20;
-      border-color: #f3ca20;
-    }
   }
+}
+
+//Form css
+
+input[type="email"],
+input[type="text"] {
+  width: 50%;
+}
+
+label {
+  margin-top: 1rem;
+}
+
+button[type="submit"] {
+  margin-top: 2rem;
+}
+
+/* Form
+––––––––––––––––––––––––––––––––– */
+label {
+  font-weight: bold;
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+input[type="email"],
+input[type="text"] {
+  padding: 0.65rem 0.5rem;
+  font-size: 1rem;
+  border: 2px solid #edf2f7;
+  background-color: #f7fafc;
+  color: #2d3748;
+  border-radius: 10px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+input:focus {
+  outline: none;
+  border: 2px solid #4299e1;
+}
+
+input:invalid {
+  border: 2px solid #ff7d87;
+  box-shadow: none;
+}
+
+input[type="submit"],
+input[type="button"],
+button {
+  display: flex;
+  padding: 0.5rem 1.25rem;
+  font-size: 1rem;
+  border-radius: 10px;
+  background-color: #4a5568;
+  border: 2px solid #4a5568;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  line-height: initial;
+  transition: background-color 200ms ease-in-out, border 200ms ease-in-out,
+    transform 200ms ease-in-out;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+@media (hover: hover) {
+  input[type="submit"]:hover,
+  input[type="button"]:hover,
+  button:hover {
+    cursor: pointer;
+    background-color: #f3ca20;
+    border-color: #f3ca20;
+    color: black;
+  }
+}
+
+button:focus-visible,
+input[type="submit"]:focus-visible,
+input[type="button"]:focus-visible {
+  border-color: #4299e1;
+  outline: none;
+}
+
+.error {
+  font-size: 12px;
+  color: #e53e3e;
+  margin-top: 0.25rem;
+  font-weight: bold;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed !important;
+}
+
+button + button {
+  margin-left: 0.5rem;
+}
+
+form {
+  line-height: 1.563;
+  margin-left: 2rem;
 }
 
 //IPAD MINI
@@ -119,6 +165,7 @@
 @media only screen and (min-width: 375px) and (max-width: 667px) {
   // <!-- For Mobile -->
   .contact-container {
+    flex: 2.2;
     .contact-detail {
       margin-top: 3rem;
       margin-left: 1rem;
@@ -133,6 +180,7 @@
 @media only screen and (min-width: 360px) and (max-width: 640px) {
   // <!-- For Mobile -->
   .contact-container {
+    flex: 2.2;
     .contact-detail {
       margin-top: 3rem;
       margin-left: 1rem;
