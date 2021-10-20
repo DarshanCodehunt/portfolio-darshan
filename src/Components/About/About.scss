@@ -1,5 +1,5 @@
 .about-container {
-  flex: 2.5;
+  height: 25rem;
   margin-top: 2rem;
   background: rgb(246 235 253);
   display: flex;
@@ -8,7 +8,6 @@
   justify-content: center;
 
   .about-title {
-    // font-family: Arial Black;
     font-size: 2.5rem;
     align-self: center;
 
@@ -25,7 +24,6 @@
     margin-top: 1rem;
     display: flex;
     flex-direction: row;
-    // font-family: Verdana;
     padding: 2rem;
     justify-content: center;
     font-family: verdana;
@@ -41,7 +39,7 @@
 //iPad 1, 2, Mini and Air || 768 x 1024 || Default, Portrait
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   .about-container {
-    flex: 1.5;
+    height: 40rem;
     .about-detail {
       font-size: 1.5rem;
       display: flex;
@@ -57,7 +55,7 @@
 //iPhone 6, 6S, 7 and 8 || 375 x 667 || Default, Portrait
 @media only screen and (min-width: 375px) and (max-width: 667px) {
   .about-container {
-    flex: 2;
+    height: 35rem;
     .about-detail {
       display: flex;
       flex-direction: column;
@@ -71,9 +69,9 @@
 }
 
 @media only screen and (min-width: 360px) and (max-width: 640px) {
-  // <!-- For Mobile -->
   .about-container {
-    flex: 2;
+    height: 35rem;
+    margin-top: 5rem;
     .about-detail {
       display: flex;
       flex-direction: column;

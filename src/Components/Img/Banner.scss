@@ -1,26 +1,15 @@
 .banner-container {
-  flex: 3 1;
   overflow: hidden;
   position: relative;
 
-  //   img {
-  //     max-height: 100%;
-  //     width: 100%;
-  //     object-fit: cover;
-  //     background-image: linear-gradient(
-  //         rgba(255, 255, 255, 0.5),
-  //         rgba(255, 255, 255, 0.5)
-  //       ),
-  //       url("../../assets/images/banner.jpg");
-  //   }
-
   .img-container {
-    // background-image: url("../../assets/images/banner.jpg");
-    // background: linear-gradient(rgba(36, 16, 36, 0.95), rgba(69, 50, 77, 1)),
-    //   url("../../assets/images/banner.jpg");
     background: linear-gradient(rgba(36, 16, 36, 0.9), #241024),
       url("../../assets/images/banner.jpg");
-    height: 100%;
+
+    height: 35rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-size: cover;
     background-repeat: no-repeat;
 
@@ -29,18 +18,13 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      height: 100%;
       align-items: center;
-      //display: flex;
-      //align-items: flex-end;
 
       .banner-title {
         font-size: 2rem;
-        // font-family: verdana;
         font-weight: bold;
         color: #f3ca20;
         animation: slideright 2s forwards;
-        // padding: 1rem;
         margin-top: 3rem;
       }
 
@@ -76,14 +60,8 @@
 }
 
 .content {
-  // position: absolute;
-  // top: 50%;
-  // left: 50%;
   transform: translate(-50%, -50%);
-  // height: 160px;
   overflow: hidden;
-
-  // font-family: 'Lato', sans-serif;
   font-size: 35px;
   line-height: 40px;
   color: #ecf0f1;
@@ -121,16 +99,6 @@
   }
 }
 
-// @-webkit-keyframes opacity {
-//   0%,
-//   100% {
-//     opacity: 0;
-//   }
-//   50% {
-//     opacity: 1;
-//   }
-// }
-
 @-webkit-keyframes change {
   0%,
   12.66%,
@@ -158,16 +126,6 @@
     transform: translate3d(0, -25%, 0);
   }
 }
-
-// @-o-keyframes opacity {
-//   0%,
-//   100% {
-//     opacity: 0;
-//   }
-//   50% {
-//     opacity: 1;
-//   }
-// }
 
 @-o-keyframes change {
   0%,
@@ -197,16 +155,6 @@
   }
 }
 
-// @-moz-keyframes opacity {
-//   0%,
-//   100% {
-//     opacity: 0;
-//   }
-//   50% {
-//     opacity: 1;
-//   }
-// }
-
 @-moz-keyframes change {
   0%,
   12.66%,
@@ -234,16 +182,6 @@
     transform: translate3d(0, -25%, 0);
   }
 }
-
-// @keyframes opacity {
-//   0%,
-//   100% {
-//     opacity: 0;
-//   }
-//   50% {
-//     opacity: 1;
-//   }
-// }
 
 @keyframes change {
   0%,
@@ -276,8 +214,8 @@
 //ipad
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   .banner-container {
-    flex: 2;
     .img-container {
+      height: 45rem;
       .img-block {
         .content.banner-title {
           white-space: nowrap;
@@ -291,8 +229,8 @@
 //iPhone 6, 6S, 7 and 8 || 375 x 667 || Default, Portrait
 @media only screen and (min-width: 375px) and (max-width: 667px) {
   .banner-container {
-    flex: 1.5;
     .img-container {
+      height: 28rem;
       .img-block {
         .img-display {
           width: 150px;
@@ -310,8 +248,8 @@
 //Galaxy
 @media only screen and (min-width: 360px) and (max-width: 640px) {
   .banner-container {
-    flex: 1.5;
     .img-container {
+      height: 28rem;
       .img-block {
         .img-display {
           width: 150px;

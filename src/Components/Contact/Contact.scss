@@ -1,12 +1,10 @@
 .contact-container {
-  flex: 3.5;
   margin-top: 2rem;
   display: flex;
   flex-direction: column;
   overflow: hidden;
 
   .contact-title {
-    // font-family: Arial Black;
     font-size: 2.5rem;
     align-self: center;
     margin-top: 2rem;
@@ -18,16 +16,6 @@
       border-radius: 1rem;
       border-color: #2c3e50 !important;
     }
-  }
-  .contact-detail {
-    margin-top: 1rem;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-    align-items: flex-start;
-    justify-content: space-between;
-    margin-left: 7rem;
   }
 }
 
@@ -143,51 +131,12 @@ form {
 //IPAD MINI
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   .contact-container {
-    flex: 2;
-    .contact-detail {
-      margin-top: 3rem;
-      margin-left: 1rem;
-
-      .input-data {
-        label {
-          font-size: 2rem;
-          margin-bottom: 1rem;
-        }
-      }
-      input {
-        width: 80%;
-        font-size: 2rem;
-      }
+    form > label {
+      font-size: 1.5rem;
     }
-  }
-}
 
-@media only screen and (min-width: 375px) and (max-width: 667px) {
-  // <!-- For Mobile -->
-  .contact-container {
-    flex: 2.2;
-    .contact-detail {
-      margin-top: 3rem;
-      margin-left: 1rem;
-
-      input {
-        width: 80%;
-      }
-    }
-  }
-}
-
-@media only screen and (min-width: 360px) and (max-width: 640px) {
-  // <!-- For Mobile -->
-  .contact-container {
-    flex: 2.2;
-    .contact-detail {
-      margin-top: 3rem;
-      margin-left: 1rem;
-
-      input {
-        width: 80%;
-      }
+    form > .error {
+      font-size: 1.2rem;
     }
   }
 }

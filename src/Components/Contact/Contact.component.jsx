@@ -47,7 +47,7 @@ const Contact = React.forwardRef((props, ref) => {
             .max(15, "Must be 15 characters or less")
             .required("This field is Required."),
           email: Yup.string()
-            .email("Invalid email addresss`")
+            .email("Invalid email addresss")
             .required("This field is Required."),
           message: Yup.string(),
         })}
