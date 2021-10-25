@@ -28,7 +28,7 @@ const Welcome = React.forwardRef((props, ref) => {
   return (
     <div id="welcome" ref={ref} className={"welcome-container"}>
       <div class="typewriter">
-        <h1>Hi there, I'm Darshan.</h1>
+        <h1>Hey there, I'm Darshan.</h1>
 
         <p id="line-1">A self determined web developer, based in Bangalore.</p>
         <p id="line-2">I love creating things that live on the Web.</p>
