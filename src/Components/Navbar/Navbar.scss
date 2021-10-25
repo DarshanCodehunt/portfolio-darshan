@@ -12,6 +12,14 @@
   // left: 0;
   // z-index: 1030;
 
+  .nav-container-class {
+    flex: 5;
+
+    .menu-icon {
+      display: none;
+    }
+  }
+
   .name-title {
     flex: 5;
     display: flex;
@@ -93,30 +101,81 @@
   z-index: 1030;
 }
 
-//IPAD MINI
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
-  .navbar-container {
-    .nav-links {
-      font-size: 1.2rem;
-    }
-  }
-}
-
-//Basic handsets
+//Common handsets
 @media only screen and (min-width: 375px) and (max-width: 667px) {
-  // <!-- For Mobile -->
   .navbar-container {
-    .nav-links {
-      font-size: 0.8rem;
+    .name-title img {
+      width: 8rem;
+      height: 6rem;
+    }
+    .nav-container-class {
+      .nav-links {
+        display: none;
+      }
+      .menu-icon {
+        display: flex;
+        justify-content: space-evenly;
+        position: relative;
+
+        .icon-display {
+          position: absolute;
+          top: 3rem;
+          width: 100%;
+          font-size: 1.2rem;
+          background: black;
+          display: flex;
+          flex-direction: column;
+          z-index: 999999;
+
+          div {
+            padding: 1rem;
+            line-height: 2.5rem;
+          }
+        }
+      }
     }
   }
 }
 
 @media only screen and (min-width: 360px) and (max-width: 640px) {
-  // <!-- For Mobile -->
+  .navbar-container {
+    .name-title img {
+      width: 8rem;
+      height: 6rem;
+    }
+    .nav-container-class {
+      .nav-links {
+        display: none;
+      }
+      .menu-icon {
+        display: flex;
+        justify-content: space-evenly;
+        position: relative;
+
+        .icon-display {
+          position: absolute;
+          top: 3rem;
+          width: 100%;
+          font-size: 1.2rem;
+          background: black;
+          display: flex;
+          flex-direction: column;
+          z-index: 999999;
+
+          div {
+            padding: 1rem;
+            line-height: 2.5rem;
+          }
+        }
+      }
+    }
+  }
+}
+//IPAD MINI
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
   .navbar-container {
     .nav-links {
-      font-size: 0.8rem;
+      font-size: 1.2rem;
     }
   }
 }

@@ -26,13 +26,17 @@ const Portfolio = React.forwardRef((props, ref) => {
             <div class="back">
               <div className={"tech-params"}>
                 <div className={"param-block"}>
-                  <div style={{ borderBottom: "1px solid black" }}>
+                  <div
+                    style={{ borderBottom: "1px solid black", width: "100%" }}
+                  >
                     Technology
                   </div>
                   <div>{obj.displayName}</div>
                 </div>
                 <div className={"param-block"}>
-                  <div style={{ borderBottom: "1px solid black" }}>
+                  <div
+                    style={{ borderBottom: "1px solid black", width: "100%" }}
+                  >
                     Experience
                   </div>
                   <div>{obj.experience}</div>
