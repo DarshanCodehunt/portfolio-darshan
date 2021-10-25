@@ -4,6 +4,7 @@ import Portfolio from "./Components/Portfolio/Portfolio.component";
 import About from "./Components/About/About.component";
 import Contact from "./Components/Contact/Contact.component";
 import Footer from "./Components/Footer/Footer.component";
+import Welcome from "./Components/Welcome/Welcome.component";
 import "./App.css";
 import { useEffect, useRef, useState } from "react";
 import Amplify from "aws-amplify";
@@ -15,6 +16,7 @@ function App() {
   const portfolioRef = useRef(null);
   const aboutRef = useRef(null);
   const contactRef = useRef(null);
+  const navRef = useRef(null);
   const [refsLoaded, setRefsLoaded] = useState(false);
   useEffect(() => {
     window.onbeforeunload = function () {
@@ -25,7 +27,9 @@ function App() {
 
   return (
     <div className={"app-container"}>
+      <Welcome navRef={refsLoaded ? navRef : null} />
       <Navbar
+        ref={navRef}
         aboutRef={refsLoaded ? aboutRef : null}
         portfolioRef={refsLoaded ? portfolioRef : null}
         contactRef={refsLoaded ? contactRef : null}

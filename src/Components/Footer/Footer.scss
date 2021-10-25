@@ -1,21 +1,61 @@
 .footer-container {
   margin-top: 1rem;
-  background: #241024;
+  background: #d8d8d8;
+  height: 5rem;
+
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
 
-  a {
-    margin: 1rem;
-    transition: all 0.3s ease;
+  .social-menu ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
   }
 
-  a:hover {
-    background: #e31b6d;
+  .social-menu ul li {
+    list-style: none;
+    margin: 0 15px;
   }
 
-  .copy-right {
-    color: silver;
+  .social-menu ul li .fab {
+    font-size: 1rem;
+    line-height: 2rem;
+    transition: 0.3s;
+    color: #000;
+  }
+
+  .social-menu ul li .fab:hover {
+    color: #fff;
+  }
+
+  .social-menu ul li a {
+    position: relative;
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: #fff;
+    text-align: center;
+    transition: 0.6s;
+    box-shadow: 0 5px 4px rgba(0, 0, 0, 0.5);
+  }
+
+  .social-menu ul li a:hover {
+    transform: translate(0, -10%);
+  }
+
+  .social-menu ul li:nth-child(1) a:hover {
+    background-color: #0077b5;
+  }
+  .social-menu ul li:nth-child(2) a:hover {
+    background-color: #4267b2;
+  }
+  .social-menu ul li:nth-child(3) a:hover {
+    background-color: #e4405f;
+  }
+  .social-menu ul li:nth-child(4) a:hover {
+    background-color: #000;
   }
 }

@@ -19,12 +19,12 @@
 
   .tech-stack-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-gap: 1rem;
     margin-top: 1rem;
     height: 100%;
     padding: 2rem;
-    width: 65%;
+    width: 100%;
     align-self: center;
     position: relative;
     justify-items: center;
@@ -36,6 +36,7 @@
       perspective: 1000;
       width: 200px;
       height: 200px;
+      cursor: pointer;
     }
 
     .flip-container:hover .flipper,
@@ -97,6 +98,8 @@
       .interest-text {
         font-size: 0.7rem;
         padding: 0.3rem;
+        color: #0d1137;
+        font-weight: bold;
       }
 
       .tech-params {
@@ -111,14 +114,15 @@
           justify-content: flex-start;
           align-items: center;
           margin: 0.5rem;
-          border: 1px solid silver;
-          background: #7a2048;
+          border: 1px solid black;
+          background: #f3ca20;
           color: white;
           font-size: 0.7rem;
 
           div {
             padding: 0.2rem;
-            color: #f3ca20;
+            color: #0d1137;
+            font-weight: bold;
           }
         }
       }

@@ -1,7 +1,8 @@
 import React from "react";
 import "./Navbar.scss";
+import Logo from "../../assets/images/logo.png";
 
-const Navbar = (props) => {
+const Navbar = React.forwardRef((props, ref) => {
   const handleNavigation = (e) => {
     const id = e.target.id;
     if (id === "techstack") {
@@ -29,14 +30,14 @@ const Navbar = (props) => {
   };
 
   return (
-    <div className={"navbar-container"}>
+    <div ref={ref} id="navbar" className={"navbar-container"}>
       <div
         onClick={() => {
           window.scrollTo(0, 0);
         }}
         className={"name-title"}
       >
-        Darshan Kodkani
+        <img src={Logo} alt={"logo"} />
       </div>
       <div onClick={handleNavigation} className={"nav-links"}>
         <a id="techstack">Techstack</a>
@@ -45,6 +46,6 @@ const Navbar = (props) => {
       </div>
     </div>
   );
-};
+});
 
 export default Navbar;

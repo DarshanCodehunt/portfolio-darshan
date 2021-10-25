@@ -7,9 +7,11 @@ const VerticalProgress = ({ progress }) => {
     <Spring from={{ percent: 0 }} to={{ percent: progress }}>
       {() => (
         <div className="progress vertical">
-          <div style={{ height: `${progress}%` }} className="progress-bar">
-            <span className="sr-only">{`${progress}%`}</span>
-          </div>
+          <span className="percentage-display">{`${progress}%`}</span>
+          <div
+            style={{ height: `${progress}%` }}
+            className="progress-bar"
+          ></div>
         </div>
       )}
     </Spring>

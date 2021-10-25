@@ -1,14 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Portfolio.scss";
 import techStackData from "./techstach.js";
 import VerticalProgress from "../VerticalProgress/VerticalProgress";
 const Portfolio = React.forwardRef((props, ref) => {
+  const [displayProgress, setDisplayProgress] = useState(false);
+
   const renderCards = () => {
     return techStackData.map((obj, i) => {
       return (
         <div
           class="flip-container"
           ontouchstart="this.classList.toggle('hover');"
+          onMouseLeave={() => {
+            setDisplayProgress(false);
+          }}
+          onMouseOver={() => {
+            setDisplayProgress(true);
+          }}
         >
           <div class="flipper">
             <div
@@ -18,21 +26,26 @@ const Portfolio = React.forwardRef((props, ref) => {
             <div class="back">
               <div className={"tech-params"}>
                 <div className={"param-block"}>
-                  <div style={{ borderBottom: "1px solid silver" }}>
+                  <div style={{ borderBottom: "1px solid black" }}>
                     Technology
                   </div>
                   <div>{obj.displayName}</div>
                 </div>
                 <div className={"param-block"}>
-                  <div style={{ borderBottom: "1px solid silver" }}>
+                  <div style={{ borderBottom: "1px solid black" }}>
                     Experience
                   </div>
                   <div>{obj.experience}</div>
                 </div>
               </div>
               <div className={"progress-section"}>
-                <VerticalProgress progress={obj.expertValue} />
-                <div className={"interest-text"}>Tech Expertise</div>
+                {displayProgress ? (
+                  <VerticalProgress progress={obj.expertValue} />
+                ) : (
+                  ""
+                )}
+
+                <div className={"interest-text"}>Expertise</div>
               </div>
               {/* <div id={"love-meter"}>
                 <VerticalProgress progress={20} />
@@ -46,7 +59,7 @@ const Portfolio = React.forwardRef((props, ref) => {
   };
   return (
     <div ref={ref} className={"portfolio-container"}>
-      <div className={" portfolio-title"}>
+      <div id={"portfolio-title"} className={" portfolio-title"}>
         TECH STACK
         <div className={"divider"}></div>
       </div>

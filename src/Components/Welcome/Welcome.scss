@@ -1,0 +1,120 @@
+.welcome-container {
+  background: #2e6d9a;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(220, 220, 220);
+
+  .arrow-icon {
+    position: absolute;
+    align-self: flex-end;
+    height: 4rem;
+    width: 3rem;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation-name: moveUp;
+    animation-duration: 2s;
+    animation-delay: 10s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: both;
+
+    img {
+      object-fit: scale-down;
+      width: 2rem;
+      height: 2rem;
+      cursor: pointer;
+    }
+  }
+
+  .typewriter h1 {
+    border-right: 1px solid white;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 32rem;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typewriter 2s steps(25) 1s 1 normal both;
+    margin-bottom: 2rem;
+    font-size: 3rem;
+  }
+
+  .typewriter #line-1 {
+    border-right: 1px solid white;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 38rem;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typewriter 3s steps(40) 1s 1 normal both;
+    animation-delay: 3.5s;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+  }
+
+  #line-2 {
+    border-right: 1px solid white;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 38rem;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typewriter 3s steps(40) 1s 1 normal both;
+    animation-delay: 7s;
+    font-size: 1.5rem;
+  }
+
+  @keyframes typewriter {
+    0% {
+      width: 0;
+      border-right: none;
+    }
+    0.1% {
+      border-right: 1px solid rgb(220, 220, 220);
+    }
+    99.9% {
+      border-right: 1px solid rgb(220, 220, 220);
+    }
+    100% {
+      border: none;
+    }
+  }
+
+  i {
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out;
+    animation-delay: 10s;
+    animation-fill-mode: forwards;
+    padding-top: 1rem;
+    padding-left: 20px;
+  }
+
+  a {
+    color: rgb(220, 220, 220);
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes moveUp {
+    0% {
+      background: none;
+    }
+    // 98% {
+    //   transform: translateY(-50px);
+    // }
+    100% {
+      background: black;
+    }
+  }
+}
