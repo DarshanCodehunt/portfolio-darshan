@@ -152,22 +152,6 @@
   }
 }
 
-@media only screen and (min-width: 375px) and (max-width: 667px) {
-  .portfolio-container {
-    .tech-stack-container {
-      display: grid;
-      grid-template-columns: repeat(1, 1fr);
-      grid-gap: 2rem;
-      padding: 0;
-      margin-top: 2rem;
-      .flip-container {
-        width: 180px;
-        height: 140px;
-      }
-    }
-  }
-}
-
 @media only screen and (min-width: 360px) and (max-width: 640px) {
   .portfolio-container {
     .tech-stack-container {

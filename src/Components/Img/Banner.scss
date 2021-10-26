@@ -226,26 +226,7 @@
   }
 }
 
-//iPhone 6, 6S, 7 and 8 || 375 x 667 || Default, Portrait
-@media only screen and (min-width: 375px) and (max-width: 667px) {
-  .banner-container {
-    .img-container {
-      height: 28rem;
-      .img-block {
-        .img-display {
-          width: 150px;
-          height: 150px;
-        }
-        .content.banner-title {
-          font-size: 1rem;
-          white-space: nowrap;
-        }
-      }
-    }
-  }
-}
-
-//Galaxy
+//Common handset
 @media only screen and (min-width: 360px) and (max-width: 640px) {
   .banner-container {
     .img-container {

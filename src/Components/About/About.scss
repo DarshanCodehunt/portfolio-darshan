@@ -52,21 +52,7 @@
   }
 }
 
-//iPhone 6, 6S, 7 and 8 || 375 x 667 || Default, Portrait
-@media only screen and (min-width: 375px) and (max-width: 667px) {
-  .about-container {
-    height: 35rem;
-    .about-detail {
-      display: flex;
-      flex-direction: column;
-      margin-top: 0;
-
-      div {
-        padding: 0.5rem;
-      }
-    }
-  }
-}
+//Common handset
 
 @media only screen and (min-width: 360px) and (max-width: 640px) {
   .about-container {
