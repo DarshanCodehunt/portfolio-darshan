@@ -7,29 +7,15 @@ const Banner = (props) => {
       <div className={"img-container"}>
         <div className={"img-block"}>
           <div className={"img-display"}>{/* <img src={Me} alt={""} /> */}</div>
-          <div class={"content banner-title"}>
-            <div class={"content__container"}>
-              <p class={"content__container__text"}>Darshan Kodkani :</p>
-
-              <ul class={"content__container__list"}>
-                <li class={"content__container__list__item"}>
-                  Full Stack Developer
-                </li>
-                <li class={"content__container__list__item"}>
-                  Web Graphic Designer
-                </li>
-                <li class={"content__container__list__item"}>
-                  UI/UX JavaScript Specialist
-                </li>
-                <li class={"content__container__list__item"}>
-                  Freelance Engineer
-                </li>
-              </ul>
-            </div>
+          <div class="container">
+            <h2 class="title">
+              <span class="title-word title-word-2">Web Graphic Designer</span>
+              <span class="color-star">- ★ -</span>
+              <span class="title-word title-word-1">Full Stack Developer</span>
+              <span class="color-star">- ★ -</span>
+              <span class="title-word title-word-3">Freelance Engineer</span>
+            </h2>
           </div>
-          {/* <div className={"banner-title"}>
-            Full Stack Developer - Web Designer
-          </div> */}
         </div>
       </div>
     </div>

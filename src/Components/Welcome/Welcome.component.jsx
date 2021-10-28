@@ -9,7 +9,9 @@ const Welcome = React.forwardRef((props, ref) => {
   });
 
   const onScroll = () => {
-    if (document.getElementById("welcome").getBoundingClientRect().bottom < 0) {
+    if (
+      document.getElementById("welcome").getBoundingClientRect().bottom < -0
+    ) {
       document.getElementById("navbar").classList.add("fixed");
     } else {
       document.getElementById("navbar").classList.remove("fixed");
@@ -31,7 +33,11 @@ const Welcome = React.forwardRef((props, ref) => {
         <h1>Hey there, I'm Darshan.</h1>
 
         <p id="line-1">A self determined web developer, based in Bangalore.</p>
-        <p id="line-2">I love creating things that live on the Web.</p>
+        {/* <p id="line-2">
+          I write things between this {"{"} {"}"} to make your website look cool
+        </p> */}
+        {/* <p id="line-2">I love creating things that live on the Web.</p> */}
+        <p id="line-2">I make things on web look Cool.</p>
         {/* <a href="mailto:di.lisova@gmail.com" target="_blank">
           <i class="fa fa-envelope-o fa-2x" aria-hidden="true"></i>
         </a> */}
