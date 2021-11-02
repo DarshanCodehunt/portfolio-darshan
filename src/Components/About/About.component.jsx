@@ -19,7 +19,7 @@ const About = React.forwardRef((props, ref) => {
       </div>
       <div className={"about-detail"}>
         <div>
-          Hey there!! Thank you for visiting{" "}
+          Thank you for visiting{" "}
           <Icon
             rotate={180}
             path={mdiEmoticonHappy}
@@ -28,10 +28,12 @@ const About = React.forwardRef((props, ref) => {
             color={"Orange"}
             vertical
           />
-          . I am a Web developer with 6 plus years of commercial experience. <br/> I
-          am currently based in Bangalore, India. I love creating websites that
-          are fast, interactive and built with best Practices.
+          . I am a Web developer with 6 plus years of commercial experience. I
+          like working with <b>open source projects</b> and <b>web platform</b>.
+          I love creating websites that are fast, interactive and built with
+          best Practices.
         </div>
+        <div style={{ flexBasis: "5%" }}></div>
         <div>
           I have a major passion for building solutions to problems that
           involves web transitions, load time optimization and responsive
