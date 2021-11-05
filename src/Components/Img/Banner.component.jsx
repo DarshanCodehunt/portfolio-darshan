@@ -10,8 +10,8 @@ const Banner = (props) => {
           <div class="container">
             <div class="title">
               <span class="title-word title-word-2">Web Graphic Designer</span>
-              <span class="color-star">- ★ -</span>
-              <span class="title-word title-word-3">Freelance Engineer</span>
+              {/* <span class="color-star">- ★ -</span>
+              <span class="title-word title-word-3">Freelance Engineer</span> */}
 
               <span class="color-star">- ★ -</span>
               <span class="title-word title-word-1">Full Stack Developer</span>
